@@ -47,7 +47,7 @@
   ],
   "relationships": {
     "systems": [
-      { "id": "fate-core-official", "type": "requires" }
+      { "id": "fate-core-official", "type": "system" }
     ]
   },
   "flags": {}
