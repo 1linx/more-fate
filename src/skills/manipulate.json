@@ -1,0 +1,20 @@
+{
+  "_id": "aklUWDuGS6rYpUqQ",
+  "name": "Manipulate",
+  "type": "more-fate.skill",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Persuasion, seduction, and sustained influence. Manipulate is the skill of bringing another person around to your way of thinking through deliberate, targeted engagement - not trickery, but pressure applied at exactly the right point. Its effects last. When someone acts against their better judgement because you convinced them to, that decision tends to stay made. When they discover they've been played, the damage is lasting - or they may double down.</p><p>This is the longer-lasting alternative to Deceive, but demands a little more time and commitment.</p>",
+    "overcome": "<p>Use Manipulate to convince someone to help you, give you access, or act against mild self-interest; to negotiate, bargain, or establish trust over the course of a scene; to talk someone down from an extreme emotional state.</p>",
+    "caa": "<p>Use Manipulate to build a scene aspect representing established trust, obligation, or emotional leverage - <em>Feels Like She Owes You</em>, *Agitated Crowd*, <em>Already Agreed in Principle</em>.</p>",
+    "attack": "<p>You can't manipulate a person into suffering harm, or at least not in the moment.</p>",
+    "defend": "<p>Likewise, your Machiavellian schemes are not going to block that punch- ouch!</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

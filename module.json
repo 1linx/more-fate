@@ -1,0 +1,54 @@
+{
+  "id": "more-fate",
+  "title": "More Fate - Additional Skills",
+  "description": "Adds a Skill item type to the Fate Core Official system, allowing GMs to create world-level skills via the standard Items interface.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14.361"
+  },
+  "authors": [
+    { "name": "Alistair Warmington" }
+  ],
+  "esmodules": [
+    "scripts/main.mjs"
+  ],
+  "styles": [
+    "styles/skill-sheet.css"
+  ],
+  "documentTypes": {
+    "Item": {
+      "skill": {
+        "htmlFields": [
+          "description",
+          "overcome",
+          "caa",
+          "attack",
+          "defend"
+        ]
+      }
+    }
+  },
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "more-fate-skills",
+      "label": "More Fate Default Skills",
+      "path": "packs/skills",
+      "type": "Item",
+      "system": "fate-core-official"
+    }
+  ],
+  "relationships": {
+    "systems": [
+      { "id": "fate-core-official", "type": "requires" }
+    ]
+  },
+  "flags": {}
+}

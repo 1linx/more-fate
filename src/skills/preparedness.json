@@ -1,0 +1,20 @@
+{
+  "_id": "zK6h1zx3jIPycOER",
+  "name": "Preparedness",
+  "type": "more-fate.skill",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Forethought, readiness, and the habit of anticipating what might be needed before the need arises. Preparedness is the counterpart to Scrounge: where Scrounge finds things in the moment, Preparedness reflects having already put them there. It covers pre-planned equipment caches, contingency thinking, established procedures for likely emergencies, and the capacity to produce a solution that you had the foresight to prepare. It is also the skill of planning ahead - routes scouted, exits noted, resources mapped.</p>",
+    "overcome": "<p>Use Preparedness to produce an item, piece of information, or resource that your character could plausibly have prepared or positioned in advance, without requiring an in-scene search. The roll establishes whether your planning was adequate, not whether the item exists.</p>",
+    "caa": "<p>Use Preparedness to establish prior planning as a scene aspect - <em>Already Scouted the Route</em>, <em>Supply Cache at the Rendezvous</em>, <em>Backup Key Hidden Before We Left</em>, <em>Signal Agreed in Advance</em> - that your group can invoke during the current situation.</p>",
+    "attack": "<p>Preparedness gives the the best resources to fight with, but can't make the Attack itself.</p>",
+    "defend": "<p>If you're walking into a gun fight and you've prepared by fitting your shirt with an iron plate, then you can have a single Defend action from Preparedness.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

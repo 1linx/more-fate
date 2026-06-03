@@ -1,0 +1,20 @@
+{
+  "_id": "kWRI0IeCzKipkENw",
+  "name": "Dexterity",
+  "type": "more-fate.skill",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Manual dexterity, fine-motor skills, and physical coordination under pressure. Dexterity covers the use of firearms and ranged weapons, as well as climbing, crawling through tight spaces, picking locks, slipping restraints, and any situation where precise, controlled physical movement is required. It is the skill of doing difficult things with your hands and body without the brute application of force.</p><p>Its contrasting skill is Physique which relates more to brute force.</p>",
+    "overcome": "<p>Use Dexterity to scale a fence, crawl through a collapsed tunnel, pick a lock, slip free from restraints, thread through debris-strewn ground without making noise, or make a technically demanding ranged shot. If the obstacle requires nimbleness or precision rather than strength, Dexterity is the appropriate skill.</p>",
+    "caa": "<p>Use Dexterity to get into a superior position before others know you're there, or to create an obstacle during a chase. Establish aspects such as <em>Better Vantage Point</em>, <em>Already Through the Window</em>, or <em>Trip hazard</em> on yourself or a scene.</p>",
+    "attack": "<p>Dexterity is used to make ranged attacks with firearms and thrown weapons. The precision and coordination of the shot, not the weapon's raw power, is what this skill reflects.</p>",
+    "defend": "<p>Dexterity is used to dodge physical attacks - stepping aside from a thrown object, ducking a swing, or breaking clear of a grab before it becomes a grapple.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

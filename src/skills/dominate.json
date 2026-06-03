@@ -1,0 +1,20 @@
+{
+  "_id": "gVy6g4O3XuWj1veu",
+  "name": "Dominate",
+  "type": "more-fate.skill",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>The capacity to fill a space - to command attention, assert presence, and make yourself impossible to ignore. Dominate is the opposite of Stealth: it is the skill of being the loudest, most visible, most compelling thing in the room, whether through force of personality, volume, physical authority, or sheer refusal to be overlooked. In a crisis, Dominate is what holds a crowd together, breaks a standoff, or creates the distraction that everyone else needs.</p>",
+    "overcome": "<p>Use Dominate to take command of a chaotic group, be heard and heeded above competing noise, stare down an immediate physical threat, command an animal, or project enough authority that someone backs down.</p>",
+    "caa": "<p>Use Dominate to establish aspects on a scene that reflect your presence having changed the social or physical dynamics - <em>Nobody Is Moving</em>, <em>All Eyes On You</em>, <em>He's Not Sure Enough of Himself to Push It</em>.</p>",
+    "attack": "<p>Dominate can be used to make a social or psychological attack - an act of pure, directed intimidation that creates mental stress.</p>",
+    "defend": "<p>By default, you can't defend with Dominate, except via an appropriate stunt.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

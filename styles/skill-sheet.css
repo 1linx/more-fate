@@ -1,0 +1,79 @@
+.more-fate-skill-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.more-fate-skill .sheet-header {
+  gap: 8px;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #999;
+}
+
+.more-fate-skill .profile-img {
+  flex: 0 0 50px;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.more-fate-skill .header-fields h1 {
+  margin: 0 0 2px;
+}
+
+.more-fate-skill .header-fields h1 input {
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.more-fate-skill .sheet-subtitle {
+  font-size: 0.8em;
+  color: #666;
+  font-style: italic;
+}
+
+.more-fate-skill .sheet-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 4px;
+}
+
+.more-fate-skill .form-group.stacked {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.more-fate-skill .form-group.stacked label {
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-bottom: 3px;
+  color: #333;
+}
+
+.more-fate-skill .form-group.stacked textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 0.85em;
+  resize: vertical;
+  padding: 4px 6px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  background: #f5f5f0;
+}
+
+.more-fate-skill .sheet-footer {
+  padding: 6px 0 0;
+  border-top: 1px solid #999;
+  text-align: right;
+}
+
+.more-fate-skill .sheet-footer button {
+  padding: 4px 14px;
+  cursor: pointer;
+}

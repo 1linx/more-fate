@@ -1,0 +1,20 @@
+{
+  "_id": "o7phzqYkcpCUBnLi",
+  "name": "Resolve",
+  "type": "more-fate.skill",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Mental fortitude. The capacity to keep functioning when the situation is overwhelming - when what you have just seen is incomprehensible, when the task is endless, when hope is genuinely difficult to locate. Resolve is not the absence of fear or grief; it is the ability to continue despite them. In a setting where the scale of loss is total and unrelenting, Resolve is the skill that keeps a character operational. It is the counterpart to Endure, which covers the body; Resolve covers the mind.</p>",
+    "overcome": "<p>Use Resolve to push through fear, panic, or despair in the moment; to hold together under sustained psychological pressure; to keep functioning in the aftermath of a mental or emotional shock; to resist coercion, interrogation, or the slow erosion of hope.</p>",
+    "caa": "<p>You can use Resolve to place aspects on yourself, representing a state of deep concentration or focus.</p>",
+    "attack": "<p>Endure isn’t really used for attacks.</p>",
+    "defend": "<p>Resolve defends against mental attacks and social actions designed to intimidate, demoralise, or psychologically destabilise. It is also the primary defence against horror - the moment of confronting something that the human mind is not designed to process.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,20 @@
+{
+  "_id": "OWNzImTlxCrgjWsT",
+  "name": "Improvise",
+  "type": "more-fate.skill",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>The ability to jury-rig, bodge, and make do. Improvise covers rapid, temporary solutions constructed from whatever is available - hotwiring a vehicle, fashioning a crude weapon, rigging a door shut, building a basic trap, or fashioning a disguise from bin bags and gaffer tape. The results work, for now, under these conditions. They are not elegant and they will not last. For considered, reliable construction, see Craft.</p>",
+    "overcome": "<p>Use Improvise to build a functional temporary solution to an immediate problem using available materials, carry out a rapid repair that will hold under pressure for a limited time, or turn an unpromising object into something useful right now.</p>",
+    "caa": "<p>Use Improvise to establish a situational aspect - <em>Crude Barricade</em>, <em>Makeshift Firestarter</em>, <em>Trip-Wire Rigged Across the Doorway</em> - that provides a meaningful tactical or practical advantage in the current scene.</p>",
+    "attack": "<p>An improvised weapon - a broken chair leg, a length of pipe, a sharpened stake - can be used to attack. When using Improvise to attack with a weapon you have just constructed, the attack uses Improvise rather than Physique.</p>",
+    "defend": "<p>Providing the scene supports the intention, you can Defend yourself by using a human shield or pulling a makeshift shield in front of you, or the classic cutting of the right rope to be whisked away to safety by a convenient pulley system. You get this just once.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

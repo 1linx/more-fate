@@ -1,0 +1,20 @@
+{
+  "_id": "QXfPmR3kLzTvHwN8",
+  "name": "Academic",
+  "type": "more-fate.skill",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Broad theoretical knowledge across a wide range of disciplines - biology, history, law, psychology, military tactics, engineering principles, medicine, chemistry, and more. Academic characters are not necessarily specialists; they are people who have read, studied, and retained enough to form useful hypotheses and recognise patterns across fields. Knowledge doesn't guarantee practical execution, but it informs and guides it.</p><p>For applied, hands-on practical knowledge, see Mechanics.</p>",
+    "overcome": "<p>Use Academic to recall relevant information, identify a substance, organism, or process, understand a document or technical text, make an educated inference about an unfamiliar situation, or work out what something is and how it probably behaves.</p>",
+    "caa": "<p>Use Academic to establish a useful fact as a scene aspect - <em>Knows the Building's Original Purpose</em>, <em>Recognised the Symptoms</em>, <em>Behavioural Science 101</em>, <em>Hazardous Material Storage</em>.</p>",
+    "attack": "<p>An academic understanding of human physiology might conceivably be useful, but only in extremely specific circumstances, or a specific stunt.</p>",
+    "defend": "<p>Only to maintain a detached, reasonable perspective on human folly as the blows fall.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

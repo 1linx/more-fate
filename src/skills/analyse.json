@@ -1,0 +1,20 @@
+{
+  "_id": "BjKdYpA7nMcWsEoG",
+  "name": "Analyse",
+  "type": "more-fate.skill",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Methodical, sustained observation and the careful drawing of conclusions. Where Instinct is quick and intuitive, Analyse is slow and deliberate - spending time with a situation, a space, or a person and building a reliable picture of what is actually happening and why. It takes longer. Its results are more dependable and often deeper. In the context of the ongoing crisis, Analyse is the skill that turns confusing symptoms into actionable understanding.</p>",
+    "overcome": "<p>Use Analyse to conduct a thorough investigation of a location or situation, work out the underlying cause of a problem, build a profile of a person or group from observed evidence, or establish a reliable conclusion from incomplete information over time.</p>",
+    "caa": "<p>Use Analyse to establish a deep, evidenced aspect if you have sufficient time to study the subject - <em>I Know the Guard Patrol Schedule</em>, <em>Favours Their Right Leg</em>, <em>Consistent Behavioural Patterns</em> - that reflects sustained, systematic attention rather than a first impression.</p>",
+    "attack": "<p>Due to the time consuming nature of this skill you can't use it to Attack.</p>",
+    "defend": "<p>Likewise for Defending.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

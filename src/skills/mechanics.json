@@ -1,0 +1,20 @@
+{
+  "_id": "PlOHGYK36g5BpPJx",
+  "name": "Mechanics",
+  "type": "more-fate.skill",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>A practical, intuitive understanding of how things work - mechanical systems, tools, vehicles, common electronics, and the physical infrastructure of daily life. Mechanics covers hotwiring a van, rigging a generator, repairing a water pump, bypassing an electronic lock with the right tools, and diagnosing why the heating system has stopped working. It is hands-on applied knowledge. For theoretical or highly specialist understanding, see Academic.</p>",
+    "overcome": "<p>Use Mechanics to repair or operate a mechanical or electrical system, diagnose a fault and work out a fix, drive or operate a vehicle in normal conditions, or bypass a mechanical or low-level electronic security measure.</p>",
+    "caa": "<p>Use Mechanics to identify a fault that can be exploited - an engine that could be quietly sabotaged, a lock that's already compromised, a building whose systems could be rigged in your favour. Create aspects like <em>Fuel Line Disconnected</em>, <em>Emergency Exit Unlocked</em>, or <em>Generator on a Timer</em>.</p>",
+    "attack": "<p>Sabotage or activate a conveniently placed piece of machinery. Likely single-use.</p>",
+    "defend": "<p>Similar to Attack, but a little harder to justify. However if it fits the fiction, then it's up to the GM.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

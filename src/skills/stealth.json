@@ -1,0 +1,20 @@
+{
+  "_id": "6JPMlaMXPLgygLWp",
+  "name": "Stealth",
+  "type": "more-fate.skill",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Moving without being seen or heard, and concealing objects and information in ways that resist discovery. Stealth is the art of not being there, or of being there in such a way that nobody notices. The skill of being quiet and small and unremarkable, when that is the only viable option.</p>",
+    "overcome": "<p>Use Stealth to move through a space undetected, conceal an object on your person or in a location, pass a guard or threat without engaging it, or hide effectively under pursuit.</p>",
+    "caa": "<p>Use Stealth to establish positional aspects before a conflict begins - <em>Unseen Behind the Counter</em>, <em>Already In the Room</em>, <em>Nobody Knows I'm Here</em> - that let you set thlaMe terms of an encounter rather than react to them.</p>",
+    "attack": "<p>You can only Attack <em>from</em> Stealth, not <em>with</em> it.</p>",
+    "defend": "<p>Not normally used to Defend, except via a stunt</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

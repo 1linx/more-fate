@@ -1,0 +1,20 @@
+{
+  "_id": "1QXVz8TgIK0VgJ1Q",
+  "name": "Instinct",
+  "type": "more-fate.skill",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>The gut feeling that something is wrong. Instinct combines conscious and subconscious perception - the hairs on your neck, the shadow that moved slightly wrong, the hesitation in someone's voice that doesn't fit what they're saying. Instinct is fast, dirty, and not always right, but it is often the difference between being ready and being caught. It is also the primary defence against attempts to Deceive you.</p>",
+    "overcome": "<p>Use Instinct to notice something hidden or concealed, pick up on an immediate environmental threat, clock that someone is being deceptive or withholding information, or react to an ambush before it fully lands.</p>",
+    "caa": "<p>Use Instinct to read a situation or a person quickly - <em>Something Is Wrong Here</em>, <em>She's Holding Something Back</em>, <em>He Knows We're Coming</em> - establishing aspects that reflect immediate perceptual judgment.</p>",
+    "attack": "<p>Your Instinct has already triggered by the time you Attack.</p>",
+    "defend": "<p>Instinct is the primary defence against Deceive. You sense the lie before you can articulate why. It may also be used in the case of an ambush.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

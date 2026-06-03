@@ -1,0 +1,10 @@
+{
+  "TYPES": {
+    "Item": {
+      "skill": "Skill",
+      "more-fate": {
+        "skill": "Skill"
+      }
+    }
+  }
+}

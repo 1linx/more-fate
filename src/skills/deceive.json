@@ -1,0 +1,20 @@
+{
+  "_id": "bQQvyajnNer2n5yN",
+  "name": "Deceive",
+  "type": "more-fate.skill",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Fast talk, lying, bluffing, and misdirection under pressure. Deceive is the skill of making someone believe something false in the short term - getting through the next few minutes, past the checkpoint, or out of the immediate confrontation. Deceptions built on Deceive will not withstand close scrutiny or the passage of time, and when they unravel, they unravel badly. For longer-lasting persuasion, see Manipulate.</p>",
+    "overcome": "<p>Use Deceive to talk your way past immediate suspicion, fabricate a plausible explanation on the spot, impersonate someone convincingly in a brief encounter, or construct a false impression that satisfies someone just long enough.</p>",
+    "caa": "<p>Use Deceive to plant a false belief as a scene aspect -  <em>But You're Meant to be Here</em>, <em>Distracted by the Story You Told</em>, or <em>Promise of a Good Time</em> - that you or allies can invoke until the deception is discovered.</p>",
+    "attack": "<p>Deceive can be used to make a social attack when a lie is designed to cause immediate distress or undermine someone's confidence in what they know - the verbal equivalent of pulling the rug out. Damages Stress</p>",
+    "defend": "<p>Deceive isn't good for physically defending yourself.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

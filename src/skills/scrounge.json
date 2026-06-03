@@ -1,0 +1,20 @@
+{
+  "_id": "BaldY6tslmoCiqaN",
+  "name": "Scrounge",
+  "type": "more-fate.skill",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>The ability to find, acquire, and extract useful things from an environment that most people would dismiss as picked clean. Scrounge is the skill of the survivor who comes back with what was needed when nobody believed anything was left. It covers foraging for food in the countryside, searching a building for overlooked resources, finding a working vehicle in a car park full of dead ones, and identifying the thing that everyone else missed. It pairs well with Improvise and Craft, which can turn raw materials into something usable.</p>",
+    "overcome": "<p>Use Scrounge to locate specific resources in an environment - food, medicine, fuel, tools, usable materials - in conditions of genuine scarcity. The difficulty reflects how depleted the environment is and how specific the need.</p>",
+    "caa": "<p>Use Scrounge to establish a resource aspect for the group - <em>Found a Working Generator</em>, <em>Three Days of Tinned Food, Overlooked</em>, <em>Fuel in the Back of the Depot Van</em> - that becomes available for the current or subsequent scene.</p>",
+    "attack": "<p>Scrounge after the Attack, not before it.</p>",
+    "defend": "<p>Not normally used to Defend.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

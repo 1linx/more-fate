@@ -1,0 +1,20 @@
+{
+  "_id": "UryZjngF29LZhFbt",
+  "name": "Endure",
+  "type": "more-fate.skill",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Physical resilience - the body's capacity to weather punishment, deprivation, disease, and exhaustion. Endure is not about avoiding damage but absorbing it: pushing through pain, continuing to function on no sleep, resisting the early stages of infection, pressing on after an injury that would stop most people. In a world where access to medical care is collapsing, Endure becomes one of the most important survival skills a character can have. It is the counterpart to Resolve, which covers the mind.</p>",
+    "overcome": "<p>Use Endure to push through physical pain or injury; to resist the effects of hunger, thirst, or exposure over time; to shake off the onset of illness; to continue functioning under conditions that are physiologically hostile.</p>",
+    "caa": "",
+    "attack": "<p>It would have be a very extreme situation to use Endure for an Attack, but it would be memorable.</p>",
+    "defend": "<p>Endure may be used to defend against attacks that operate through physical attrition rather than direct force - prolonged exposure, toxins, or conditions that wear the body down.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

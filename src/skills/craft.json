@@ -1,0 +1,20 @@
+{
+  "_id": "TnTvOmxInONOsA3j",
+  "name": "Craft",
+  "type": "more-fate.skill",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>The deliberate, skilled making of things from raw materials. Craft takes time and produces reliable results - a functioning bow, a meal for twenty survivors, a set of armour that will actually stop something, a rabbit snare. Unlike Improvise, which is fast and temporary, Craft is the skill of making things that last, function correctly, and can be trusted when the situation demands. While Mechanics covers repair and operation, Craft is about building from scratch.</p>",
+    "overcome": "<p>Use Craft to build something from raw components over time - weapons, armour, shelter elements, tools, agricultural equipment, or medical devices - to a quality that will hold up under real use.</p>",
+    "caa": "<p>Use Craft to establish a durable aspect on a location or object - <em>Properly Reinforced Door</em>, <em>Weapons Cache, Hidden and Accessible</em>, <em>Functional Distillation Rig</em> - that represents lasting, quality work rather than a quick fix.</p>",
+    "attack": "<p>Craft is a long and involved process - longer than a combat round at any rate so can't be used for an Attack.</p>",
+    "defend": "<p>As above.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}
