@@ -1,10 +1,6 @@
 # Dependencies
 node_modules/
 
-# Foundry modifies its own copy of the LevelDB when the module is loaded.
-# The compiled pack is derived from src/skills/ — don't track it.
-packs/
-
 # OS
 .DS_Store
 Thumbs.db
