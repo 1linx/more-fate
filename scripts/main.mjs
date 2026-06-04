@@ -190,7 +190,7 @@ Hooks.once("ready", async () => {
     if (actor.type !== "fate-core-official") continue;
     const actorTracks = foundry.utils.duplicate(actor.system.tracks);
     if (!patchTracks(actorTracks)) continue;
-    await actor.update({ "system.tracks": actorTracks }, { render: false });
+    await actor.update({ "system.tracks": actorTracks }, { render: false, noHook: true });
     console.log(`${MODULE_ID} | Patched tracks for: ${actor.name}`);
   }
 });
