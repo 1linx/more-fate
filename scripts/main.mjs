@@ -14,19 +14,25 @@ function tob64(text) {
   return btoa(binString).split("=").join("");
 }
 
+// Builds the world-skill entry for a Skill Item.
+// Spreads existing world skill data first so fields we don't expose (bonus,
+// compendium_id, etc.) are preserved when writing back.
 function buildSkillData(item) {
   const s = item.system ?? {};
+  const key = tob64(item.name);
+  const existing = fcoConstants?.wd?.()?.system?.skills?.[key] ?? {};
   return {
+    pc:     true,
+    rank:   0,
+    adhoc:  false,
+    hidden: false,
+    ...existing,
     name:        item.name,
     description: s.description ?? "",
     overcome:    s.overcome    ?? "",
     caa:         s.caa         ?? "",
     attack:      s.attack      ?? "",
     defend:      s.defend      ?? "",
-    pc:          true,
-    rank:        0,
-    adhoc:       false,
-    hidden:      false,
   };
 }
 
@@ -52,7 +58,6 @@ function patchTracks(tracks) {
     const isConsequence       = ALL_CONSEQUENCE_NAMES.includes(track.name);
 
     // ── Ensure consequence tracks have the correct aspect structure ──────────
-    // If aspect is missing or when_marked is not true the text field won't render.
     if (isConsequence) {
       if (typeof track.aspect !== "object" || track.aspect === null ||
           track.aspect.when_marked !== true || track.aspect.as_name !== false) {
@@ -86,6 +91,10 @@ function patchTracks(tracks) {
 }
 
 let _pendingSkillRename = null;
+
+// Set to true while we're bulk-creating Items from world skill data so that
+// the createItem hook doesn't redundantly write them back.
+let _importingFromWorld = false;
 
 // ── Init ──────────────────────────────────────────────────────────────────────
 
@@ -164,8 +173,10 @@ Hooks.once("ready", async () => {
     return;
   }
 
-  // 1. Sync Skill items → world skill list on the world data actor.
+  // 1. Sync any pre-existing Skill Items → world skill list.
   const skillItems = game.items.filter(i => isSkillItem(i));
+  const existingItemNames = new Set(skillItems.map(i => i.name));
+
   if (skillItems.length) {
     const patch = {};
     for (const item of skillItems) patch[tob64(item.name)] = buildSkillData(item);
@@ -173,19 +184,41 @@ Hooks.once("ready", async () => {
     console.log(`${MODULE_ID} | Synced ${skillItems.length} skill(s) to world skill list.`);
   }
 
-  // 2. Patch world track templates so new characters automatically get
-  //    Resolve linked to Mental Stress. The Fate system copies these world
-  //    templates onto new characters at creation time.
+  // 2. Import world skills that don't yet have a Skill Item so GMs can edit
+  //    the built-in Fate Core skills through the same Items interface.
+  const worldSkills = wd.system.skills ?? {};
+  const toImport = Object.values(worldSkills).filter(ws => ws.name && !existingItemNames.has(ws.name));
+
+  if (toImport.length) {
+    _importingFromWorld = true;
+    try {
+      await Item.createDocuments(toImport.map(ws => ({
+        name:   ws.name,
+        type:   `${MODULE_ID}.skill`,
+        img:    "icons/svg/book.svg",
+        system: {
+          description: ws.description ?? "",
+          overcome:    ws.overcome    ?? "",
+          caa:         ws.caa         ?? "",
+          attack:      ws.attack      ?? "",
+          defend:      ws.defend      ?? "",
+        },
+      })));
+      console.log(`${MODULE_ID} | Imported ${toImport.length} world skill(s) as editable Items.`);
+    } finally {
+      _importingFromWorld = false;
+    }
+  }
+
+  // 3. Patch world track templates so new characters automatically get
+  //    Resolve linked to Mental Stress.
   const worldTracks = foundry.utils.duplicate(wd.system.tracks);
   if (patchTracks(worldTracks)) {
     await wd.update({ "system.tracks": worldTracks });
     console.log(`${MODULE_ID} | Patched world tracks for Resolve.`);
   }
 
-  // 3. Patch existing character tracks with the Resolve linked_skills entries.
-  //    The Fate system calls setupTracks automatically when a player changes
-  //    their skill ranks, which recalculates stress box counts from linked_skills.
-  //    We only need to ensure the entries exist — no need to call setupTracks here.
+  // 4. Patch existing character tracks with the Resolve linked_skills entries.
   for (const actor of game.actors) {
     if (actor.type !== "fate-core-official") continue;
     const actorTracks = foundry.utils.duplicate(actor.system.tracks);
@@ -198,7 +231,7 @@ Hooks.once("ready", async () => {
 // ── CRUD hooks ────────────────────────────────────────────────────────────────
 
 Hooks.on("createItem", async (item, _options, _userId) => {
-  if (!isSkillItem(item) || !game.user.isGM) return;
+  if (!isSkillItem(item) || !game.user.isGM || _importingFromWorld) return;
   await fcoConstants.wd().update({
     "system.skills": { [tob64(item.name)]: buildSkillData(item) },
   });
@@ -213,17 +246,31 @@ Hooks.on("preUpdateItem", (item, changes) => {
 
 Hooks.on("updateItem", async (item, _changes, _options, _userId) => {
   if (!isSkillItem(item) || !game.user.isGM) return;
-  const patch = { [tob64(item.name)]: buildSkillData(item) };
+  const wd = fcoConstants.wd();
+
   if (_pendingSkillRename) {
-    patch[_pendingSkillRename] = foundry.utils._del;
+    // Rename: remove old key and write new key atomically to avoid duplicates.
+    const skills = foundry.utils.duplicate(wd.system.skills ?? {});
+    delete skills[_pendingSkillRename];
+    skills[tob64(item.name)] = buildSkillData(item);
     _pendingSkillRename = null;
+    await wd.update({ "system.skills": skills }, { diff: false });
+  } else {
+    await wd.update({
+      "system.skills": { [tob64(item.name)]: buildSkillData(item) },
+    });
   }
-  await fcoConstants.wd().update({ "system.skills": patch });
 });
 
 Hooks.on("deleteItem", async (item, _options, _userId) => {
   if (!isSkillItem(item) || !game.user.isGM) return;
-  await fcoConstants.wd().update({
-    "system.skills": { [tob64(item.name)]: foundry.utils._del },
-  });
+  const wd = fcoConstants.wd();
+  const key = tob64(item.name);
+  // Read the full skills object, delete the key in JS, then write it back with
+  // diff:false.  Using foundry.utils._del can be swallowed by the DataModel
+  // merge pipeline, leaving the deleted skill visible in the world list.
+  const skills = foundry.utils.duplicate(wd.system.skills ?? {});
+  if (!(key in skills)) return;
+  delete skills[key];
+  await wd.update({ "system.skills": skills }, { diff: false });
 });
