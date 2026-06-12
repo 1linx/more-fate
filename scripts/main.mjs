@@ -249,12 +249,16 @@ Hooks.on("updateItem", async (item, _changes, _options, _userId) => {
   const wd = fcoConstants.wd();
 
   if (_pendingSkillRename) {
-    // Rename: remove old key and write new key atomically to avoid duplicates.
-    const skills = foundry.utils.duplicate(wd.system.skills ?? {});
-    delete skills[_pendingSkillRename];
-    skills[tob64(item.name)] = buildSkillData(item);
+    // Rename: delete old key and write new key in one update.
+    // _del is the globalThis ForcedDeletion singleton (same as the Fate system uses).
+    const oldKey = _pendingSkillRename;
     _pendingSkillRename = null;
-    await wd.update({ "system.skills": skills }, { diff: false });
+    await wd.update({
+      "system.skills": {
+        [oldKey]:          _del,
+        [tob64(item.name)]: buildSkillData(item),
+      },
+    });
   } else {
     await wd.update({
       "system.skills": { [tob64(item.name)]: buildSkillData(item) },
@@ -264,13 +268,9 @@ Hooks.on("updateItem", async (item, _changes, _options, _userId) => {
 
 Hooks.on("deleteItem", async (item, _options, _userId) => {
   if (!isSkillItem(item) || !game.user.isGM) return;
-  const wd = fcoConstants.wd();
-  const key = tob64(item.name);
-  // Read the full skills object, delete the key in JS, then write it back with
-  // diff:false.  Using foundry.utils._del can be swallowed by the DataModel
-  // merge pipeline, leaving the deleted skill visible in the world list.
-  const skills = foundry.utils.duplicate(wd.system.skills ?? {});
-  if (!(key in skills)) return;
-  delete skills[key];
-  await wd.update({ "system.skills": skills }, { diff: false });
+  // _del is the globalThis ForcedDeletion singleton — the correct way to
+  // remove a key via Foundry's merge pipeline (foundry.utils._del does not exist).
+  await fcoConstants.wd().update({
+    "system.skills": { [tob64(item.name)]: _del },
+  });
 });
